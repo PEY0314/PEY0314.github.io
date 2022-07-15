@@ -1,0 +1,19 @@
+/* HOVER */
+  /*FLIP*/
+    .card_overlay_front {
+      background-color: #afafaf;
+      color: #333;
+    }
+    .card_overlay_back {
+      color: #afafaf;
+      background: #333;
+    }
+  /*SLIDE DOWN BOX*/
+    .AT_slidedown .image_overlay{
+      background-color: #ee6f8c;
+      color: #fff;
+    }
+  /*IMAGE BG COMBO*/
+    .AT_bgcombo .image_box:before{
+	  background-color: rgb(104, 139, 162);
+    }

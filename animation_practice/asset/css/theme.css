@@ -1,0 +1,113 @@
+  /*CARD - TILT & FLIP*/
+    .card_box {
+      text-align: center;
+      position: relative;
+      padding-bottom: 100%;
+      transform-style: preserve-3d;
+    }
+    .card_overlay_front,
+    .card_overlay_back {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10% 5%;
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+    }
+    .card_overlay_front {
+      background-size: cover;
+      background-blend-mode: overlay;
+    }
+    .card_overlay_front::before {
+      content: '';
+      position: absolute;
+      --spacer: 5%;
+      top: var(--spacer);
+      bottom: var(--spacer);
+      left: var(--spacer);
+      right: var(--spacer);
+    }
+    .card_overlay_back {
+      transform: rotateY(.5turn);
+      background: #333;
+    }
+
+    .AT_tilt .card_overlay_front::before {
+      content: '';
+      border: 3px solid currentColor;
+      transform: translateZ(3rem);
+    }
+    .AT_tilt .card_overlay_front_content {
+      transform: translateZ(9rem);
+    }
+
+
+  /*SLIDE DOWN BOX*/
+    .AT_slidedown .image_box{
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .AT_slidedown .image_overlay{
+      width: 100%;
+      height:100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+    
+
+  /*IMAGE BG COMBO*/
+    .AT_bgcombo .image_box{
+      position: relative;
+    }
+    .AT_bgcombo .image_box:before{
+      content: " ";
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      width: 100%;
+    }
+
+  /*AT_pictures with scroll*/
+    .AT_pictures .image_box{
+      position: relative;
+      width: 100%;
+    }
+    .AT_pictures .image_box:after {
+      content: "";
+      display: block;
+      padding-bottom: calc(9/16*100%);
+    }
+    .AT_pictures .image_self{
+      width: 100%;
+      height: 100%;
+      position:absolute;
+      object-fit: cover;
+    }
+
+/*Pure animation*/
+    .AT_bigger.image_wrap{
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .AT_bigger.image_wrap:after {
+      content: "";
+      display: block;
+      padding-bottom: calc(9/16*100%);
+    }
+    .AT_bigger .image_self{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+    }

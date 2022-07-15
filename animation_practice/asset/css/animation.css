@@ -1,0 +1,117 @@
+/*Scroll then Animation*/
+  /*slide_top*/
+    .AT_slidetop{
+      transform: translateY(5%);
+      opacity: 0;
+      transition: 1s ease-in-out;
+    }
+    .AT_slidetop.scroll_AT{
+      transform: translateY(0);
+      opacity: 1;
+    }
+  /*slide_left*/
+    .AT_slideleft{
+      transform: translateX(50%);
+      opacity: 0;
+      transition: 1s ease-in-out;
+    }
+    .AT_slideleft.scroll_AT{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  /*slide_right*/
+    .AT_slideright{
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: 1s ease-in-out;
+    }
+    .AT_slideright.scroll_AT{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  /*rotate*/
+    .AT_rotate .image_self{
+      transform: translateY(10%) rotateZ(-5deg);
+      opacity: 0;
+      transition: 4s .25s cubic-bezier(0,1,.3,1);
+    }
+    .AT_rotate.scroll_AT .image_self{
+      transform: translateY(0) rotateZ(-2deg);
+      opacity: 1;
+    }
+
+
+/*Scroll with Animation*/
+    .AT_tilt .card_box{
+      transform: rotateX(10deg);
+      transition: 1s ease-in-out;
+    }
+    .AT_flip .card_box{
+      transform: rotateY(0deg);
+      transition: 2s linear;
+    }
+    .AT_sm_to_o .image_box{
+      transform: scale(0.6);
+    }
+
+
+/*Hover*/
+  /*CARD*/
+    .card3d.hover_AT:hover .AT_fliper{
+      transform: rotateY(.5turn);
+    }
+
+  /*FLIP*/
+    .AT_flip .card_box{
+      transform: rotateY(0deg);
+      transition: 1s ease-in-out;
+    }
+    .AT_flip.hover_AT.card_wrap:hover .card_box{
+      transform: rotateY(.5turn);
+    }
+
+  /*IMAGE SLIDE DOWN BOX*/
+    .AT_slidedown .image_overlay{
+      transform: translateY(-100%);
+      -webkit-transition: transform 0.5s ease-out;
+      -o-transition: transform 0.5s ease-out;
+      transition: transform 0.5s ease-out;
+    }
+    .AT_slidedown.hover_AT.hover_AT .image_box:hover .image_overlay{
+      transform: translateY(0);
+    }
+
+  /*IMAGE BG COMBO*/
+    .AT_bgcombo .image_box:before{
+      transform: scale(1) translateX(5%) translateY(5%) rotate(0deg);/*transform: scale(1) translateX(15px) translateY(15px) rotate(0deg);*/
+      transition: all .5s ease-in-out;
+    }
+    .AT_bgcombo.hover_AT.image_wrap:hover .image_box:before{
+      transform: scale(.95) translateX(3%) translateY(3%) rotate(3deg);/*transform: scale(.95) translateX(15px) translateY(18px) rotate(3deg);*/
+    }
+    .AT_bgcombo .image_self{
+      transform: translateX(0px) translateY(0px) rotate(0deg);
+      transition: all .5s ease-in-out;
+    }
+    .AT_bgcombo.hover_AT.image_wrap:hover .image_self{
+      transform: translateX(-2%) translateY(-2%) rotate(-3deg);/*transform: translateX(-10px) translateY(-10px) rotate(-3deg);*/
+    }
+
+
+
+/*Pure animation*/
+  /*bigger*/
+    .AT_bigger .image_self{
+      animation: bigger 5s linear forwards;
+    }
+    @keyframes bigger{
+      0%{
+        transform: scale(1);
+      }
+      100%{
+        transform: scale(1.3);
+      }
+    }
+
+
+    
